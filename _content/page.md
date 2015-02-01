@@ -11,7 +11,7 @@ hero_col_one: |
   <p class="p-small">
   Hawthorne is a portfolio template. <a href="http://www.jeremiahshoaf.com" target="_blank">View a live site</a>.
   </p>
-  
+
   <h3>2. Willamette Template</h3>
   <p class="p-small">
   Willamette is a marketing site template used by this site. <a class="changeThemeLink">Change the theme</a>.
@@ -71,22 +71,22 @@ copy_faq_button: >
   Learn More About Us →
 faq_button_url: /about/
 faq_grid:
-  - 
+  -
     faq_header: 'Is this frequently asked question one lorem ipsum?'
     faq_paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod elit consectetur, eleifend turpis in, volutpat tortor. In laoreet ipsum sem, at feugiat mauris placerat ac."
-  - 
+  -
     faq_header: 'Is this frequently asked question two lorem ipsum?'
     faq_paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod elit consectetur, eleifend turpis in, volutpat tortor. In laoreet ipsum sem, at feugiat mauris placerat ac.'
-  - 
+  -
     faq_header: 'Is this frequently asked question three lorem ipsum?'
     faq_paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod elit consectetur, eleifend turpis in, volutpat tortor. In laoreet ipsum sem, at feugiat mauris placerat ac.'
-  - 
+  -
     faq_header: Is this frequently asked question four lorem ipsum?
     faq_paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod elit consectetur, eleifend turpis in, volutpat tortor. In laoreet ipsum sem, at feugiat mauris placerat ac.'
-  - 
+  -
     faq_header: Is this frequently asked question five lorem ipsum?
     faq_paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod elit consectetur, eleifend turpis in, volutpat tortor. In laoreet ipsum sem, at feugiat mauris placerat ac.'
-  - 
+  -
     faq_header: Is this frequently asked question six lorem ipsum?
     faq_paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod elit consectetur, eleifend turpis in, volutpat tortor. In laoreet ipsum sem, at feugiat mauris placerat ac.'
 meta_description: 'Home meta description'
@@ -114,29 +114,29 @@ copy_pricing_feature9_paragraph: ""
 pricing_features_hide: 0
 copy_pricing_table1_header: Pricing Table 1
 pricing_table1_grid:
-  - 
+  -
     pricing_table1_item: 'Lorem ipsum dolor sit amet'
-  - 
+  -
     pricing_table1_item: 'Sed interdum tincidunt nibh'
-  - 
+  -
     pricing_table1_item: Et vehicula metus malesuada eget
 copy_pricing_table1_button: '<a href="#" class="button round">Buy Now</a>'
 copy_pricing_table2_header: Pricing Table 2
 pricing_table2_grid:
-  - 
+  -
     pricing_table2_item: 'Lorem ipsum dolor sit amet'
-  - 
+  -
     pricing_table2_item: 'Sed interdum tincidunt nibh'
-  - 
+  -
     pricing_table2_item: 'Et vehicula metus malesuada eget'
 copy_pricing_table2_button: '<a href="#" class="button round">Buy Now</a>'
 copy_pricing_table3_header: Pricing Table 3
 pricing_table3_grid:
-  - 
+  -
     pricing_table3_item: 'Lorem ipsum dolor sit amet'
-  - 
+  -
     pricing_table3_item: 'Sed interdum tincidunt nibh'
-  - 
+  -
     pricing_table3_item: 'Et vehicula metus malesuada eget'
 copy_pricing_table3_button: '<a href="#" class="button round">Buy Now</a>'
 copy_pricing_features_footer: '<em>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere magna neque</em>'
@@ -146,7 +146,7 @@ html_section: |
   		<h3 id="flat-file-cms">Lorem Ipsum Dolor</h3>
   	</div>
   </div>
-  
+
   <div class="row">
   	<div class="small-12 medium-6 large-6 columns">
   		<p>
@@ -176,7 +176,7 @@ html_section2: |
   <h3>About</h3>
   </div>
   </div>
-  
+
   <div class="row">
   <div class="small-12 medium-4 large-4 columns">
   <h4>Lorem Ipsum Since 2008</h4>
@@ -184,20 +184,20 @@ html_section2: |
   Maecenas at justo fermentum, dignissim quam a, condimentum augue. Maecenas sed turpis id nisi mollis ornare sed sit amet massa. Praesent varius rutrum magna, eu interdum tortor commodo eu. Ut at elit sagittis, malesuada orci eget, dapibus sapien. Vestibulum ante ipsum primis in faucibus orci luctus.
   </p>
   </div>
-  
+
   <div class="small-12 medium-4 large-4 columns">
   <h4>Lorem Ipsum Dolor</h4>
   <p>
   Maecenas at justo fermentum, dignissim quam a, condimentum augue. Maecenas sed turpis id nisi mollis ornare sed sit amet massa. Praesent varius rutrum magna, eu interdum tortor commodo eu. Ut at elit sagittis, malesuada orci eget, dapibus sapien. Vestibulum ante ipsum primis in faucibus orci luctus.
   </p>
   </div>
-  
+
   <div class="small-12 medium-4 large-4 columns">
   <h4>Lorem Ipsum Dolor</h4>
   <p>
   Maecenas at justo fermentum, dignissim quam a, condimentum augue. Maecenas sed turpis id nisi mollis ornare sed sit amet massa. Praesent varius rutrum magna, eu interdum tortor commodo eu. Ut at elit sagittis, malesuada orci eget, dapibus sapien. Vestibulum ante ipsum primis in faucibus orci luctus.
   </p>
-  
+
   </div>
   </div>
 
