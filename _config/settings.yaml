@@ -13,7 +13,7 @@
 ###########################################################################################
 
 # Enter your license key
-_license_key:
+_license_key: e4e80953-c209-4b88-878b-9eb42e216adb
 
 _language: en
 
@@ -21,13 +21,13 @@ _language: en
 _site_root: /
 
 # Name of your site
-_site_name: Another Awesome Statamic Site
+_site_name: Lesl Land
 
 # Change the folder name for your content directory
 _content_root: _content
 
 # Used for permalinks
-_site_url: http://statamic.com
+_site_url: http://104.236.171.18
 
 # Folder name of your desired theme
 _theme: acadia
@@ -122,7 +122,7 @@ _environments:
     - '*.com'
 
 # Set to 'true' if you want to log system messages
-_log_enabled: false
+_log_enabled: true
 
 # What's the least-serious level of message you wish to record to the log?
 # Your available options:
@@ -164,7 +164,7 @@ _admin_theme: ascent
 
 # Customize which pages show in the control panel
 _admin_nav:
-  dashboard: false
+  dashboard: true
   pages:     true
   members:   true
   account:   true
@@ -175,7 +175,7 @@ _admin_nav:
   logout:    true
 
 # When you log in, where would you like to start?
-_admin_start_page: pages
+_admin_start_page: dashboard
 
 # Enable/Disable the ability to add new top level pages via the CP
 _enable_add_top_level_page: true
