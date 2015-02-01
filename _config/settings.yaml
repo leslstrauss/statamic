@@ -21,13 +21,13 @@ _language: en
 _site_root: /
 
 # Name of your site
-_site_name: Willamette
+_site_name: LS Land
 
 # Change the folder name for your content directory
 _content_root: _content
 
 # Used for permalinks
-_site_url: http://104.236.171.18
+_site_url: http://lesliestrauss
 
 # Folder name of your desired theme
 _theme: willamette
