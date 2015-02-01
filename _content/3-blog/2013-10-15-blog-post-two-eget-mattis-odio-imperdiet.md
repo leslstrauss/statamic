@@ -1,16 +1,21 @@
 ---
-title: Blog Post One Lorem Ipsum
+title: Blog Post Two Eget Mattis Odio Imperdiet
 page_title: ""
-meta_description: Blog post one meta description
+meta_description: ""
 categories:
-  - Business
+  - Design
+  - Freelancing
 excerpt: >
-  Excerpt for blog post one erat ornare
-  rutrum tristique. Curabitur sollicitudin
-  purus et gravida consequat.
+  Excerpt for blog post two proin tempus
+  mi quis dui sagittis, sed posuere lacus
+  ultrices. Curabitur sollicitudin purus
+  et gravida consequat. Praesent tempus
+  massa libero, faucibus rutrum ipsum
+  mollis sit amet. In ornare sagittis
+  nisl.
 _template: blog-post
-color_body_bg: color_1
-color_footer_bg: color_2
+color_body_bg: "1"
+color_footer_bg: "2"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed lacus id sem pellentesque imperdiet. Morbi magna arcu, aliquam sit amet arcu id, feugiat ultrices felis. Aliquam laoreet rutrum diam, eget mattis odio imperdiet in. Quisque in felis et neque fermentum volutpat.
 
@@ -18,7 +23,7 @@ Aliquam fringilla, purus at mollis consequat, libero quam sodales turpis, non co
 
 Proin dapibus at lorem sit amet viverra. In neque dolor, sollicitudin nec mollis sit amet, pharetra vitae nibh. Nam gravida condimentum mollis. Phasellus tempor, sem eget elementum convallis, ipsum leo vestibulum erat, ac accumsan massa magna ac elit. Ut non elit convallis, venenatis magna adipiscing, tincidunt nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
-## Blog Post Subheader Text Lorem Ipsum
+## Blog Post Subheader Text
 
 Suspendisse volutpat libero ipsum, ut porta erat pretium eu. Suspendisse convallis rhoncus leo, eu fermentum nunc accumsan ut. Donec mollis viverra ipsum nec aliquam. Phasellus imperdiet lobortis eros. Pellentesque placerat velit in mauris rutrum tincidunt. Vivamus cursus, erat ornare rutrum tristique, leo orci lobortis nunc, ut iaculis felis quam pellentesque massa. Sed odio erat, accumsan vitae iaculis dictum, dignissim sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

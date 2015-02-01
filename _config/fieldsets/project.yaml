@@ -1,0 +1,79 @@
+title: Root Level Project
+hide: yes
+
+fields:
+  
+  page_title:
+    type: text
+    display: Page Title in Browser
+    instructions: Optional - override the title used above for SEO purposes
+  
+  meta_description:
+    type: text
+    display: Meta Description
+
+  thumbnail_img_src:
+    type: file
+    display: Upload Thumbnail Image
+    instructions: PNG, JPG or GIF sized 328x203
+    allowed: [png, gif, jpg, jpeg]
+    destination: assets/img/projects
+    show_thumbnail: true
+    required: true
+  
+  content:
+    type: markitup
+    display: Project Description
+  
+  project_info:
+    type: grid
+    display: Project Info
+    starting_rows: 2
+    fields:
+      project_info_label:
+        display: Label
+        type: text
+        width: 50%
+      project_info_value:
+        display: Value
+        type: text
+        width: 50%
+
+  insert_hr:
+    type: checkbox
+    display: Insert Horizontal Rule?
+    default: 0
+
+  detail_images:
+    type: grid
+    display: Detail Images
+    starting_rows: 1
+    fields:
+      detail_img_src:
+        display: Upload Image
+        type: file
+        destination: assets/img/projects
+        width: 25%
+      alt_text:
+        display: Alt Text
+        type: text
+        width: 75%
+        
+  show_caption:
+    type: checkbox
+    display: Display Alt Text As Image Caption?
+    default: 0
+    
+  has_back_to_top:
+    type: checkbox
+    display: Display Back to Top Link at Bottom?
+    default: 0
+
+  raw_html:
+    type: textarea
+    display: Raw HTML
+    instructions: For embedding videos or whatever else you might need, see sample code here - typeandgrids.com/reference/video.txt
+    
+  _template:
+    type: hidden
+    default: project-detail

@@ -42,7 +42,7 @@ class Statamic
     public static function loadAllConfigs($admin = false)
     {
         $hash = Debug::markStart('config', 'finding');
-        
+
         /*
         |--------------------------------------------------------------------------
         | YAML Mode
@@ -65,7 +65,7 @@ class Statamic
         | us to always have clean defaults.
         |
         */
-        
+
         $settings_to_parse = File::get(Config::getAppConfigPath() . '/default.settings.yaml');
 
         /*
@@ -76,7 +76,7 @@ class Statamic
         | Next we parse and override the user's settings.
         |
         */
-        
+
         $settings_to_parse .= "\n\n" . File::get(Config::getConfigPath() . '/settings.yaml');
 
         /*
@@ -91,7 +91,7 @@ class Statamic
 
         $settings_to_parse .= "\n\n_routes:\n  " . trim(preg_replace("/\n/", "\n  ", File::get(Config::getConfigPath() . '/routes.yaml')));
         $settings_to_parse .= "\n\n_vanity_urls:\n  " . trim(preg_replace("/\n/", "\n  ", File::get(Config::getConfigPath() . '/vanity.yaml')));
-                
+
         /*
         |--------------------------------------------------------------------------
         | Global Variables
@@ -101,16 +101,16 @@ class Statamic
         | the config folder and make them available as global template variables.
         |
         */
-        
-        if (Folder::exists($config_files_location = Config::getConfigPath())) {            
+
+        if (Folder::exists($config_files_location = Config::getConfigPath())) {
             $files = glob($config_files_location . '/*.yaml');
-            
+
             if ($files) {
                 foreach ($files as $file) {
                     if (strpos($file, 'routes.yaml') !== false || strpos($file, 'vanity.yaml') !== false || strpos($file, 'settings.yaml')) {
                         continue;
                     }
-                    
+
                     $settings_to_parse .= "\n\n" . File::get($file);
                 }
             }
@@ -139,10 +139,10 @@ class Statamic
         */
 
         $hash = Debug::markStart('config', 'finding');
-        
+
         $themes_path = array_get($config, '_themes_path', '_themes');
         $theme_name  = array_get($config, '_theme', 'acadia');
-        
+
         // reset
         $settings_to_parse = '';
 
@@ -155,14 +155,14 @@ class Statamic
                 }
             }
         }
-        
+
         Debug::markEnd($hash);
-        
+
         // parse theme settings if any
         if ($settings_to_parse) {
             $config = YAML::parse($settings_to_parse, $yaml_mode) + $config;
         }
-        
+
 
         /*
         |--------------------------------------------------------------------------
@@ -239,7 +239,7 @@ class Statamic
         if ($admin) {
             $admin_theme = array_get($config, '_admin_theme', 'ascent');
 
-            if (!Folder::exists(BASE_PATH . Path::tidy('/' . $config['_admin_path'] . '/' . 'themes/' . $admin_theme))) {                
+            if (!Folder::exists(BASE_PATH . Path::tidy('/' . $config['_admin_path'] . '/' . 'themes/' . $admin_theme))) {
                 $admin_theme = 'ascent';
             }
 
@@ -254,7 +254,7 @@ class Statamic
             $config['theme_path']     = $themes_path . '/' . $config['_theme'] . '/';
             $config['templates.path'] = Path::tidy($public_path . $themes_path . '/' . $config['_theme'] . '/');
         }
-        
+
         if (!array_get($config, '_display_debug_panel', false)) {
             Debug::disable();
         }
@@ -398,7 +398,7 @@ class Statamic
         $app->config['get_post'] = $app->config['get'] + $app->config['post'];
         $app->config['homepage'] = Config::getSiteRoot();
         $app->config['now']      = time();
-	    
+
 	    // optional setting
         if (!array_get($app->config, '_site_root', false)) {
             $app->config['_site_root'] = SITE_ROOT;

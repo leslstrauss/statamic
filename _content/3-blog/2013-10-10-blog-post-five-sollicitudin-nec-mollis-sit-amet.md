@@ -1,20 +1,22 @@
 ---
 title: >
-  Blog Post Four Fusce Semper Velit
-  Volutpat
+  Blog Post Five Sollicitudin Nec Mollis
+  Sit Amet
 page_title: ""
 meta_description: ""
 categories:
+  - Business
   - Design
   - Typography
 excerpt: >
-  Excerpt for blog post four curabitur
-  semper pretium tortor in posuere.
-  Suspendisse sapien metus, pellentesque
-  sed dapibus elementum, gravida at ligula
+  Excerpt for blog post five suspendisse
+  volutpat libero ipsum, ut porta erat
+  pretium eu. Suspendisse convallis
+  rhoncus leo, eu fermentum nunc accumsan
+  ut.
 _template: blog-post
-color_body_bg: color_1
-color_footer_bg: color_2
+color_body_bg: "1"
+color_footer_bg: "2"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed lacus id sem pellentesque imperdiet. Morbi magna arcu, aliquam sit amet arcu id, feugiat ultrices felis. Aliquam laoreet rutrum diam, eget mattis odio imperdiet in. Quisque in felis et neque fermentum volutpat.
 

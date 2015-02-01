@@ -1,21 +1,21 @@
 ---
-title: Blog Post Two Eget Mattis Odio Imperdiet
+title: >
+  Blog Post Three Duis Velit Sed Felis
+  Aliquam Lobortis a Tortor
 page_title: ""
 meta_description: ""
 categories:
   - Design
-  - Freelancing
+  - Typography
 excerpt: >
-  Excerpt for blog post two proin tempus
-  mi quis dui sagittis, sed posuere lacus
-  ultrices. Curabitur sollicitudin purus
-  et gravida consequat. Praesent tempus
-  massa libero, faucibus rutrum ipsum
-  mollis sit amet. In ornare sagittis
-  nisl.
+  Excerpt for blog post three ut non elit
+  convallis, venenatis magna adipiscing,
+  tincidunt nisl. Class aptent taciti
+  sociosqu ad litora torquent per conubia
+  nostra, per inceptos himenaeos.
 _template: blog-post
-color_body_bg: color_1
-color_footer_bg: color_2
+color_body_bg: "1"
+color_footer_bg: "2"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed lacus id sem pellentesque imperdiet. Morbi magna arcu, aliquam sit amet arcu id, feugiat ultrices felis. Aliquam laoreet rutrum diam, eget mattis odio imperdiet in. Quisque in felis et neque fermentum volutpat.
 

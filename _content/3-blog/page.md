@@ -6,8 +6,8 @@ description: ""
 _default_folder_template: post
 meta_description: Blog meta description
 page_title: ""
-color_body_bg: color_1
-color_footer_bg: color_2
+color_body_bg: "1"
+color_footer_bg: "2"
 copy_blog_archive: Blog Archive
 copy_blog_categories: Categories
 num_blog_posts_per_page: "4"

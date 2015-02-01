@@ -14,22 +14,6 @@ fields:
   content:
     type: markitup
     display: Content
-  
-  color_body_bg:
-    type: radio
-    display: Body Background Color
-    options:
-      color_1: Color 1
-      color_2: Color 2
-    default: 1
-    
-  color_footer_bg:
-    type: radio
-    display: Footer Background Color
-    options:
-      color_1: Color 1
-      color_2: Color 2
-    default: 2
     
   _template:
     type: hidden
