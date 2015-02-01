@@ -1,0 +1,35 @@
+/*==================================================================================================
+Color Theme 04
+==================================================================================================*/
+@import "master/master_color_theme_04";
+
+
+
+/*==================================================================================================
+Foundation Variables
+==================================================================================================*/
+$primary-color: shade($color-dark, 50%);
+$secondary-color: $color-highlight;
+$alert-color: $color-highlight;
+$success-color: $color-highlight;
+
+$body-bg: tint($color-light, 98%);
+
+$body-font-color: shade($color-dark, 50%);
+$anchor-font-color-hover: $color-highlight;
+$header-font-color: shade($color-dark, 50%);
+
+$hr-border-color: $color-dark-on-light-30;
+
+
+
+/*==================================================================================================
+My Variables
+==================================================================================================*/
+$color-top-border: $color-highlight;
+$color-logo: shade($color-dark, 50%);
+$color-tagline: shade($color-dark, 30%);
+$color-nav-current: $color-dark-on-light-70;
+$color-thumbnail-hover: $color-highlight;
+$color-link-underline: $color-dark-on-light-40;
+$color-footer-text: shade($color-dark, 40%);

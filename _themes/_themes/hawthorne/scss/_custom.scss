@@ -1,0 +1,541 @@
+/*==================================================================================================
+Foundation Variables
+==================================================================================================*/
+@import "foundation/functions";
+$rem-base: 16px;
+
+//$row-width: 70.5em;
+$row-width: rem-calc(1129); // Add extra pixel because of Safari scaling issue
+$column-gutter: 3em;
+$block-grid-default-spacing: $column-gutter;
+
+$h1-font-size: rem-calc(48px);
+$h2-font-size: rem-calc(36px);
+$h3-font-size: rem-calc(30px);
+$h4-font-size: rem-calc(24px);
+$h5-font-size: rem-calc(18px);
+$h6-font-size: 1em;
+
+// Media Query Ranges
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em);
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// Legacy
+$small: $medium-up;
+$medium: $medium-up;
+$large: $large-up;
+
+$cursor-default-value: "default";
+$include-open-sans: false;
+
+
+
+/*==================================================================================================
+Imports
+==================================================================================================*/
+@import "themes/type_07";
+@import "themes/color_03";
+@import "master/blog";
+
+
+
+/*==================================================================================================
+Global
+==================================================================================================*/
+
+html {
+	background-color: $body-bg !important;
+}
+
+a, button, img, nav ul a, .thumbnail-caption a {
+	@include transition-color;
+}
+
+p a, li a, .thumbnail-caption a {
+	@include transition-border;
+	@include transition-color;
+	border-bottom: 1px solid $hr-border-color;
+	padding-bottom: 1px;
+}
+
+p a:hover, li a:hover, .thumbnail-caption a:hover, .caption-hover {
+	color: $anchor-font-color-hover;
+	border-bottom: 1px solid $anchor-font-color-hover !important;
+}
+
+li .thumbnail-hover a, li thumbnail-img a img {
+	border-bottom: none !important;
+}
+
+div.lined-list ul {
+	margin-left: 0;
+}
+
+.lined-list li {
+	font-family: $lined-list-font-family;
+	font-weight: $lined-list-font-weight;
+	font-style: $lined-list-font-style;
+	font-size: $lined-list-font-size;
+	line-height: $lined-list-line-height;
+	letter-spacing: $lined-list-letter-spacing;
+	text-transform: $lined-list-text-transform;
+	list-style-type: none;
+	border-bottom: 1px solid $hr-border-color;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
+	margin-left: 0;
+}
+
+.lined-list li strong {
+	font-family: $lined-list-strong-font-family;
+	font-weight: $lined-list-strong-font-weight;
+	font-style: $lined-list-strong-font-style;
+	font-size: $lined-list-strong-font-size;
+	line-height: $lined-list-strong-line-height;
+	letter-spacing: $lined-list-strong-letter-spacing;
+	text-transform: $lined-list-strong-text-transform;
+}
+
+.lined-list li:first-child {
+	border-top: 1px solid $hr-border-color;
+}
+
+.centered {
+	text-align: center;
+}
+
+iframe {
+	border: none !important;
+}
+
+ul.inline-list-custom li {
+	margin-left: 0 !important;
+}
+
+ul li {
+	//margin-left: 1.25em;
+	margin-left: 0.25em;
+	padding-bottom: 1em;
+}
+
+ol li {
+	//margin-left: 2.25em;
+	margin-left: 0.25em;
+	padding-bottom: 1em;
+}
+
+.row blockquote {
+	border-left: 1px solid $hr-border-color;
+}
+
+.row blockquote p, .row blockquote {
+	color: $body-font-color;
+	font-style: italic;
+}
+
+.row blockquote cite {
+	font-weight: bold;
+	font-style: normal;
+	color: $body-font-color;
+	font-size: 1em;
+	margin-top: 1em;
+}
+
+div h1, div h2, div h3, div h4, div h5, div h6 {
+	font-weight: bold;
+}
+
+div div h2 {
+	font-family: $body-header1-font-family;
+	font-weight: $body-header1-font-weight;
+    font-style: $body-header1-font-style;
+	font-size: $body-header1-font-size-small;
+	line-height: $body-header1-line-height;
+	letter-spacing: $body-header1-letter-spacing;
+	text-transform: $body-header1-text-transform;
+}
+
+div div h3 {
+	font-family: $body-header2-font-family;
+	font-weight: $body-header2-font-weight;
+    font-style: $body-header2-font-style;
+	font-size: $body-header2-font-size-small;
+	line-height: $body-header2-line-height;
+	letter-spacing: $body-header2-letter-spacing;
+	text-transform: $body-header2-text-transform;
+}
+
+.p-small {
+	font-size: $p-small-font-size;
+	line-height: $p-small-line-height;
+}
+
+.p-smaller {
+	font-size: $p-smaller-font-size;
+	line-height: $p-smaller-line-height;
+}
+
+.caption {
+	@extend .p-small;
+	margin-top: -0.5em;
+}
+
+.social-inline {
+	margin-left: 0;
+}
+
+.social-inline li {
+	display: block;
+	float: left;
+	margin-left: 0;
+	margin-right: 1.5em;
+	vertical-align: top !important;
+}
+
+.social-inline li:first-child {
+	margin-right: 0;
+}
+
+.social-inline li span {
+	vertical-align: top !important;
+}
+
+
+
+/*==================================================================================================
+Header & Nav
+==================================================================================================*/
+
+.top-border {
+	border-top: 4px solid $color-top-border;
+}
+
+header {
+	padding-top: 3em;
+	padding-bottom: 2em;
+}
+
+header div.logo {
+	text-align: center;
+}
+
+div div header h1 {
+	font-family: $logo-font-family;
+	font-weight: $logo-font-weight;
+    font-style: $logo-font-style;
+	font-size: $logo-font-size-small;
+	line-height: $logo-line-height;
+	letter-spacing: $logo-letter-spacing;
+	text-transform: $logo-text-transform;
+	line-height: 1.1;
+	text-align: center;
+	color: $color-logo;
+}
+
+div div header h1 a {
+	text-decoration: none;
+	color: $color-logo;
+}
+
+div div header h2 {
+	font-family: $tagline-font-family;
+	font-weight: $tagline-font-weight;
+    font-style: $tagline-font-style;
+	font-size: $tagline-font-size-small;
+	line-height: $tagline-line-height;
+	letter-spacing: $tagline-letter-spacing;
+	text-transform: $tagline-text-transform;
+	line-height: 1.4;
+	text-align: center;
+	color: $color-tagline;
+	//margin-top: -0.4em;
+	margin-top: 0.75em;
+}
+
+div div header h2 a {
+	text-decoration: none;
+	color: $color-tagline;
+}
+
+div div header h1 a:hover, header h1 a:focus {
+	color: $color-logo;
+}
+
+div div header h2 a:hover, header h2 a:focus {
+	color: $color-tagline;
+}
+
+nav {
+	border-top: 1px solid $hr-border-color;
+	border-bottom: 1px solid $hr-border-color;
+	margin-bottom: 3em;	
+	background-color: $body-bg;
+}
+
+nav ul.inline-list-custom {
+	text-align: center;
+	padding-top: 0.8em;
+	margin-bottom: 0.8em;
+	margin-left: 0;
+}
+
+nav ul.inline-list-custom li {
+	font-family: $nav-font-family;
+	font-weight: $nav-font-weight;
+    font-style: $nav-font-style;
+	font-size: $nav-font-size;
+	line-height: $nav-line-height;
+	letter-spacing: $nav-letter-spacing;
+	text-transform: $nav-text-transform;
+	display: inline-block;
+	padding-left: 1em;
+	margin-right: 1em;
+	//margin-right: 2em;
+	padding-bottom: 0;
+}
+
+nav ul li a, nav ul li a:hover {
+	border: none !important;
+}
+
+a.current {
+	color: $color-nav-current;
+	pointer-events: none;
+}
+
+a.current:hover {
+	color: $color-nav-current;
+}
+
+
+
+/*==================================================================================================
+Project
+==================================================================================================*/
+
+.thumbnail {
+	margin-bottom: -0.5em;
+	max-width: 328px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.thumbnail-img {
+	position: relative;
+}
+
+.thumbnail-hover {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color-thumbnail-hover, 0.5);
+}
+
+.thumbnail-hover a {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.thumbnail-hover a:hover {
+	border: none;
+}
+
+.thumbnail-caption {
+	font-family: $thumbnail-caption-font-family;
+	font-weight: $thumbnail-caption-font-weight;
+    font-style: $thumbnail-caption-font-style;
+	font-size: $thumbnail-caption-font-size;
+	line-height: $thumbnail-caption-line-height;
+	letter-spacing: $thumbnail-caption-letter-spacing;
+	text-transform: $thumbnail-caption-text-transform;
+	text-align: center;
+	margin-top: 0.5em;
+}
+
+.thumbnail-caption a {
+	@include transition-color;
+}
+
+ul.small-block-grid-1 li {
+	text-align: center;
+}
+
+hr.project-detail-hr {
+	margin-top: 1.75em;
+	display: none;
+}
+
+.project-img {
+	text-align: center;
+	margin-top: 3em;
+}
+
+.project-img:first-of-type {
+	margin-top: 1.75em;
+}
+
+.project-img h6 {
+	padding-top: 1em;
+	font-family: $thumbnail-caption-font-family;
+	font-weight: $thumbnail-caption-font-weight;
+    font-style: $thumbnail-caption-font-style;
+	font-size: $thumbnail-caption-font-size;
+	line-height: $thumbnail-caption-line-height;
+	letter-spacing: $thumbnail-caption-letter-spacing;
+	text-transform: $thumbnail-caption-text-transform;
+}
+
+.back-to-top-holder {
+	margin-top: 4em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+.back-to-top {
+	border: none;
+	color: $color-footer-text;
+}
+
+a.back-to-top:hover {
+	border: none !important;
+}
+
+.raw-html iframe {
+	padding-top: 2em;
+}
+
+.raw-html div {
+	margin-top: 2em;
+}
+
+.raw-html hr {
+	display: none;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+
+
+/*==================================================================================================
+Footer
+==================================================================================================*/
+
+footer {
+	border-top: 1px solid $hr-border-color;
+	margin-top: 3em;
+	padding-top: 4em;
+	padding-bottom: 5em;
+}
+
+footer ul {
+	text-align: center;
+	margin-top: 2em;
+	margin-left: 0;
+}
+
+footer li {
+	font-family: $footer-font-family;
+	font-weight: $footer-font-weight;
+    font-style: $footer-font-style;
+	font-size: $footer-font-size;
+	line-height: $footer-line-height;
+	letter-spacing: $footer-letter-spacing;
+	text-transform: $footer-text-transform;
+	display: inline-block;
+	padding-left: 1em;
+	margin-right: 1em;
+	color: $color-footer-text;
+}
+
+footer li a {
+	color: $color-footer-text;
+	@include transition-color;
+}
+
+footer div.social-icons {
+	text-align: center;
+}
+
+footer div.social-icons i {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	color: $color-footer-text;
+}
+
+footer div.social-icons a:hover i {
+	color: $color-highlight;
+	@include transition-color;
+}
+
+footer div.social-icons a i {
+	@include transition-color;
+}
+
+
+
+/*==================================================================================================
+Media Queries
+==================================================================================================*/
+
+@media #{$small} {
+
+	header {
+		padding-top: 6.25em;
+		padding-bottom: 3.95em;
+	}
+	
+	div div header h1 {
+		font-size: $logo-font-size;
+	}
+	
+	div div header h2 {
+		font-size: $tagline-font-size;
+	}
+	
+	div div h2 {
+		font-size: $body-header1-font-size;
+	}
+	
+	div div h3 {
+		font-size: $body-header2-font-size;
+	}
+	
+	hr.project-detail-hr {
+		display: block;
+	}
+	
+	.raw-html hr {
+		display: block;
+	}
+	
+	.project-img:first-of-type {
+		margin-top: 3em;
+	}
+	
+}

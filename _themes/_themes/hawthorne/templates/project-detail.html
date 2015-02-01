@@ -1,0 +1,57 @@
+<div class="row">
+	<div class="small-12 medium-7 large-7 columns {{ if !project_info:0:project_info_label }} small-centered {{ endif }}">
+		<h2 {{ if !project_info:0:project_info_label }} class="centered" {{ endif }}>{{ title }} </h2>
+		{{ if !project_info:0:project_info_label }}
+		<div class="centered">
+		{{ endif }}
+		{{ content }}
+		{{ if !project_info:0:project_info_label }}
+		</div>
+		{{ endif }}
+	</div>
+	{{ if project_info:0:project_info_label }}
+	<div class="small-12 medium-5 large-5 columns">
+		<div class="lined-list">
+			<ul>
+				{{ project_info }}
+				<li>
+					<strong>
+						{{ if project_info_label }}{{ project_info_label }}{{ endif }}{{ get_content from="/settings" }}{{ copy_lined_list_separator }}{{ /get_content }}
+					</strong> 
+					{{ if project_info_value }}{{ project_info_value }}{{ endif }}
+				</li>
+				{{ /project_info }}
+			</ul>
+		</div>
+	</div>
+	{{ endif }}
+</div>
+
+<div class="row">
+	<div class="small-12 medium-12 large-12 columns">
+		{{ if detail_images:0:detail_img_src }}
+		{{ if insert_hr }}<hr class="project-detail-hr" />{{ endif }}
+		{{ detail_images }}
+		<div class="project-img">
+			<img src="{{ detail_img_src }}" alt="{{ alt_text }}" />
+			{{ if show_caption }} <h6>{{ alt_text }}</h6> {{ endif }}
+		</div>
+		{{ /detail_images }}
+		{{ endif }}
+		
+		{{ if raw_html }}
+		<div class="raw-html">
+		<hr />
+		{{ raw_html }}
+		</div>
+		{{ endif }}
+	</div>
+</div>
+
+{{ if has_back_to_top }}
+<div class="row">
+	<div class="small-12 medium-12 large-12 columns">
+		<p class="back-to-top-holder"><a class="back-to-top"><i class="fa fa-chevron-circle-up fa-3x"></i></a></p>
+	</div>
+</div>
+{{ endif }}

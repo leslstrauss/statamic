@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="small-12 medium-12 large-12 columns">
+		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 inline-list-custom">
+			{{ if segment_1 }}
+			{{ entries:listing }}	
+			<li>
+				<div class="thumbnail">
+					<div class="thumbnail-img">
+						<div class="thumbnail-hover"><a href="/{{ segment_1 }}/{{ slug }}"></a></div>
+						<a href="/{{ segment_1 }}/{{ slug }}"><img src="{{ thumbnail_img_src }}" alt="{{ title }}" /></a>
+					</div>
+					{{ if !hide_thumbnail_captions }}
+					<div class="thumbnail-caption"><a class="caption-link" href="/{{ segment_1 }}/{{ slug }}">{{ title }}</a></div>
+					{{ endif }}
+				</div>
+			</li>
+			{{ /entries:listing }}
+			{{ else }}
+			{{ entries:listing folder="/selected-work" }}	
+			<li>
+				<div class="thumbnail">
+					<div class="thumbnail-img">
+						<div class="thumbnail-hover"><a href="/selected-work/{{ slug }}"></a></div>
+						<a href="/selected-work/{{ slug }}"><img src="{{ thumbnail_img_src }}" alt="{{ title }}" /></a>
+					</div>
+					{{ if !hide_thumbnail_captions }}
+					<div class="thumbnail-caption"><a class="caption-link" href="/selected-work/{{ slug }}">{{ title }}</a></div>
+					{{ endif }}
+				</div>
+			</li>
+			{{ /entries:listing }}
+			{{ endif }}			
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+/*==================================================================================================
+Color Theme 09
+==================================================================================================*/
+@import "master/master_color_theme_09";
+
+
+
+/*==================================================================================================
+Foundation Variables
+==================================================================================================*/
+$primary-color: shade($color-highlight, 30%);
+$secondary-color: shade($color-highlight, 30%);
+$alert-color: shade($color-highlight, 30%);
+$success-color: shade($color-highlight, 30%);
+
+$body-bg: tint($color-light, 10%);
+
+$body-font-color: shade($color-highlight, 30%);
+$anchor-font-color-hover: $color-highlight;
+$header-font-color: shade($color-highlight, 30%);
+
+$hr-border-color: shade($color-highlight, 30%);
+
+
+
+/*==================================================================================================
+My Variables
+==================================================================================================*/
+$color-top-border: shade($color-highlight, 30%);
+$color-logo: shade($color-highlight, 30%);
+$color-tagline: shade($color-highlight, 30%);
+$color-nav-current: $color-dark-on-light-40;
+$color-thumbnail-hover: $color-highlight;
+$color-link-underline: $color-dark-on-light-40;
+$color-footer-text: shade($color-highlight, 30%);
