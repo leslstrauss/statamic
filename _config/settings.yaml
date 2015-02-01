@@ -21,7 +21,7 @@ _language: en
 _site_root: /
 
 # Name of your site
-_site_name: Lesl Land
+_site_name: Willamette
 
 # Change the folder name for your content directory
 _content_root: _content
@@ -30,16 +30,16 @@ _content_root: _content
 _site_url: http://104.236.171.18
 
 # Folder name of your desired theme
-_theme: acadia
+_theme: willamette
 
 # Entries should include timestamp YYYY-MM-DD-HHII
 _entry_timestamps: false
 
 # Global formatting for {{ date }} variables
-_date_format: 'F jS, Y'
+_date_format: 'F j, Y'
 
 # Global formatting for time variables
-_time_format: 'g:ia'
+_time_format: 'g:i.s a'
 
 # Timezone
 _timezone: America/New_York
@@ -50,7 +50,7 @@ _taxonomy:
   - tags
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)
-_taxonomy_slugify: false
+_taxonomy_slugify: true
 
 # Make taxonomy values case sensitive (when true, "example" would *not* match "Example")
 _taxonomy_case_sensitive: false
@@ -73,7 +73,7 @@ _enable_smartypants: true
 _theme_cache_bust: false
 
 # Specify where to save transformed images
-_transform_destination: assets/img/resized
+_transform_destination: false
 
 # allow the use of PHP in Statamic templates
 _allow_php: false
@@ -97,7 +97,7 @@ _parse_order:
 _fix_out_of_range_pagination: true
 
 # Experimental: Set http/browser cache length. Plain English is perfect. 1 hour, 1 day, 1 week, etc
-_http_cache_expires: false
+_http_cache_expires: 4 hours
 
 _enable_static_pipeline: false
 
@@ -122,7 +122,7 @@ _environments:
     - '*.com'
 
 # Set to 'true' if you want to log system messages
-_log_enabled: true
+_log_enabled: false
 
 # What's the least-serious level of message you wish to record to the log?
 # Your available options:
@@ -202,7 +202,7 @@ _allow_file_field_deletions: false
 ###########################################################################################
 
 # plain english works just fine here.
-_cookies.lifetime: 1 day
+_cookies.lifetime: 3 months
 
 # For advanced users only. Here be dragons.
 _cookies.cipher: MCRYPT_RIJNDAEL_256
