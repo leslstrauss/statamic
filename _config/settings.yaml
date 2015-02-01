@@ -27,10 +27,10 @@ _site_name: LS Land
 _content_root: _content
 
 # Used for permalinks
-_site_url: http://lesliestrauss
+_site_url: http://lesliestrauss.com
 
 # Folder name of your desired theme
-_theme: willamette
+_theme: hawthorne
 
 # Entries should include timestamp YYYY-MM-DD-HHII
 _entry_timestamps: false
