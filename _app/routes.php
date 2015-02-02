@@ -10,7 +10,7 @@ $app->map('/TRIGGER/:namespace/:hook(/:segments+)', function ($namespace, $hook,
     if ($app->request()->isPost()) {
         $_FILES = _Upload::standardizeFileUploads($_FILES);
     }
-    
+
     /*
     |--------------------------------------------------------------------------
     | Hook: Routes Before
@@ -90,12 +90,12 @@ $app->get('/_add-ons/(:segments+)', function($segments = array()) use ($app) {
     // clean segments
     $segments = URL::sanitize($segments);
     $file_requested = implode($segments, '/');
-    
+
     $bundle_folder  = APP_PATH . "/core/bundles/" . $segments[0];
     $file = APP_PATH . "/core/bundles/" . $file_requested;
 
     $file = realpath($file);
-    
+
     // prevent bad access of files
     if (strpos($file_requested, '../') !== false || File::getExtension($file) === 'php') {
         $app->pass();
@@ -116,7 +116,7 @@ $app->get('/_add-ons/(:segments+)', function($segments = array()) use ($app) {
 
         // set mime-type
         header("Content-type: {$mime}");
-        
+
         // read it out
         readfile($file);
 
@@ -139,7 +139,7 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
     if ($app->request()->isPost()) {
         $_FILES = _Upload::standardizeFileUploads($_FILES);
     }
-    
+
     global $is_debuggable_route;
     $is_debuggable_route = true;
 
@@ -179,7 +179,7 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
         $app->config['segment_' . $count] = $seg;  // segments are already sanitized
     }
     $app->config['last_segment'] = end($segments);
-    
+
     // mark milestone for debug panel
     Debug::markMilestone('segments determined');
 
@@ -277,31 +277,31 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
                     'data' => $route_data
                 );
                 break;
-                
+
             // check for named wildcards
             } elseif (strpos($route_url, '{') !== false) {
                 // get segment names
                 preg_match_all('/{\s*([a-zA-Z0-9_\-]+)\s*}/', $route_url, $matches);
-                
+
                 // nothing found, skip it
                 if (!count($matches)) {
                     continue;
                 }
-                
+
                 // these are the keys we're looking for
                 $named_keys   = $matches[1];
-                
+
                 // create regex out of the route
                 $fixed_route  = preg_replace('/{\s*[a-zA-Z0-9_\-]+\s*}/', '([^/]*)', str_replace(array('.', '*'), array('\.', '[^\/]*'), $route_url));
-                
+
                 // make me a match
                 if (preg_match('#^' . $fixed_route . '$#i', $current_url, $new_matches)) {
                     // shift off the first item
                     array_shift($new_matches);
-                    
+
                     // merge values with keys, these will be merged in later
                     $parsed_route_data = URL::sanitize(array_combine($named_keys, $new_matches));
-                    
+
                     // found a route, save it and get ou
                     $found_route = array(
                         'url' => $route_url,
@@ -316,7 +316,7 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
     // mark milestone for debug panel
     Debug::markMilestone('routes determined');
 
-    
+
     // routes via routes.yaml
     if ($found_route) {
         $current_route = $found_route['data'];
@@ -381,12 +381,12 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
         $content_found = true;
     }
 
-    
+
     // content was found
     if ($content_found) {
         // mark milestone for debug panel
         Debug::markMilestone('content found');
-        
+
         // protect
         if (is_array($data) && $data) {
             try {
@@ -403,7 +403,7 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
 
         // alter the response code if you want
         $response_code = (int) array_get($data, '_response', $response_code);
-        
+
         // if the response_code was set to 404, show a 404
         if ($response_code === 404) {
             $content_found = false;
@@ -579,7 +579,7 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
         $app->lastModified(Cache::getLastCacheUpdate());
         $app->expires('+'.Config::get('http_cache_expires', '30 minutes'));
     }
-    
+
     // append the response code
     $data['_http_status']  = $response_code;
     $data['_response']     = $response_code;
