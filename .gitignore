@@ -13,8 +13,9 @@ Thumbs.db
 # Statamic files #
 ######################
 _cache/*
-_cache
 !_cache/index.html
 _logs/*
-_logs
 !_logs/index.html
+
+/_cache/_app/content/content.php
+/_cache/_app/content/last.php
