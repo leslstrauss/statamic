@@ -7,13 +7,3 @@ meta_description: >
   Selected Work meta description
 hide_thumbnail_captions: 0
 ---
-
-
-
-
-
-
-
-
-
-

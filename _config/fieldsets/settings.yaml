@@ -1,7 +1,7 @@
 hide: yes
 
 fields:
-  
+
   type_theme:
     type: select
     display: Type Theme
@@ -36,19 +36,19 @@ fields:
     type: text
     display: Site Title
     instructions: Site Title in Browser
-  
+
   email_address:
     type: text
     display: Email Address
-  
+
   copy_logo:
     type: text
     display: Logo Text
-  
+
   copy_tagline:
     type: text
     display: Tagline Text
-  
+
   main_nav_link_grid:
     type: grid
     display: Main Nav External Links
@@ -62,24 +62,24 @@ fields:
         type: text
         display: Nav Link
         width: 50%
-        
+
   copy_lined_list_separator:
     type: text
     display: Lined List Separator
-  
+
   footer_html:
     type: textarea
     display: Footer HTML
     instructions: Reference - typeandgrids.com/reference/footer.txt
-  
+
   social_icons:
     type: textarea
     display: Footer Social Icons
     instructions: Reference - typeandgrids.com/reference/social_icons.txt
-  
+
   analytics_code:
     type: textarea
     display: Analytics Code
-           
+
   content:
     type: hidden

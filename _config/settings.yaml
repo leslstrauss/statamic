@@ -118,8 +118,14 @@ _environments:
     - 'http://localhost*'
     - '*.dev'
     - '*.localip'
+    - 'http://dev.lesliestrauss.com'
+    - 'http://104.236.171.18'
+#   - disable_analytics: true
   live:
     - '*.com'
+    - 'http://lesliestrauss.com'
+    - 'http://www.lesliestrauss.com'
+#   - disable_analytics: true
 
 # Set to 'true' if you want to log system messages
 _log_enabled: false
