@@ -2,20 +2,17 @@ node_modules
 
 # OS generated files #
 ######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# .DS_Store
+# .DS_Store?
+# ._*
+# .Spotlight-V100
+# .Trashes
+# ehthumbs.db
+# Thumbs.db
 
 # Statamic files #
 ######################
 _cache/*
-!_cache/index.html
+_cache
 _logs/*
-!_logs/index.html
-
-/_cache/_app/content/content.php
-/_cache/_app/content/last.php
+_logs
