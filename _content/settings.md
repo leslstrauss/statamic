@@ -24,13 +24,6 @@ analytics_code: |
     ga('create', 'UA-59180297-2', 'auto');
     ga('send', 'pageview');
   </script>
-  <script>
-    jQuery(document).ready(function() {
-      setTimeout(function () {
-        $('#main').load("test.php");
-      }, 0);
-    });
-  </script>
 ---
 
 
