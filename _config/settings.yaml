@@ -181,7 +181,7 @@ _admin_nav:
   logout:    true
 
 # When you log in, where would you like to start?
-_admin_start_page: dashboard
+_admin_start_page: pages
 
 # Enable/Disable the ability to add new top level pages via the CP
 _enable_add_top_level_page: true
