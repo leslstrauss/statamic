@@ -77,9 +77,9 @@ fields:
   #   display: Footer Social Icons
   #   instructions: Reference - typeandgrids.com/reference/social_icons.txt
 
-  # analytics_code:
-  #   type: textarea
-  #   display: Analytics Code
+  analytics_code:
+    type: textarea
+    display: Analytics Code
 
   content:
     type: hidden
