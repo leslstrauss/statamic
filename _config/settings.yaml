@@ -21,7 +21,7 @@ _language: en
 _site_root: /
 
 # Name of your site
-_site_name: LS Land
+_site_name: Late Shapes
 
 # Change the folder name for your content directory
 _content_root: _content
@@ -42,7 +42,8 @@ _date_format: 'F j, Y'
 _time_format: 'g:i.s a'
 
 # Timezone
-_timezone: America/New_York
+_timezone: America/Portland
+# _timezone: America/New_York
 
 # List of desired taxonomy triggers
 _taxonomy:
@@ -73,10 +74,11 @@ _enable_smartypants: true
 _theme_cache_bust: false
 
 # Specify where to save transformed images
-_transform_destination: false
+_transform_destination: assets/img/resized
+# _transform_destination: false
 
 # allow the use of PHP in Statamic templates
-_allow_php: true
+_allow_php: false
 
 # Choose your YAML mode:
 #  - quick (Dipper, some of YAML 1.0)
@@ -97,7 +99,8 @@ _parse_order:
 _fix_out_of_range_pagination: true
 
 # Experimental: Set http/browser cache length. Plain English is perfect. 1 hour, 1 day, 1 week, etc
-_http_cache_expires: 4 hours
+_http_cache_expires: false
+# _http_cache_expires: 4 hours
 
 _enable_static_pipeline: false
 
@@ -121,8 +124,6 @@ _environments:
 #   - disable_analytics: true
   live:
     - '*.com'
-    - 'http://lesliestrauss.com'
-    - 'http://www.lesliestrauss.com'
 #   - disable_analytics: true
 
 # Set to 'true' if you want to log system messages
@@ -197,7 +198,7 @@ _prepend_site_root_to_uploads: false
 # _revisions: local_revisions
 
 # Allow deleting files through the File field
-_allow_file_field_deletions: true
+_allow_file_field_deletions: false
 
 ###########################################################################################
 #
