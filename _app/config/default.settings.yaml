@@ -3,7 +3,7 @@ _language: en
 _site_name: Another Awesome Statamic Site
 _content_root: _content
 _site_url: http://statamic.com
-_theme: hawthorne
+_theme: acadia
 _entry_timestamps: false
 _date_format: 'F jS, Y'
 _time_format: 'g:i.s a'
