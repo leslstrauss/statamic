@@ -76,7 +76,7 @@ _theme_cache_bust: false
 _transform_destination: false
 
 # allow the use of PHP in Statamic templates
-_allow_php: false
+_allow_php: true
 
 # Choose your YAML mode:
 #  - quick (Dipper, some of YAML 1.0)
@@ -118,8 +118,6 @@ _environments:
     - 'http://localhost*'
     - '*.dev'
     - '*.localip'
-    - 'http://dev.lesliestrauss.com'
-    - 'http://104.236.171.18'
 #   - disable_analytics: true
   live:
     - '*.com'
@@ -128,7 +126,7 @@ _environments:
 #   - disable_analytics: true
 
 # Set to 'true' if you want to log system messages
-_log_enabled: false
+_log_enabled: true
 
 # What's the least-serious level of message you wish to record to the log?
 # Your available options:
@@ -149,7 +147,7 @@ _log_file_path: _logs
 _log_file_prefix: site
 
 # Will show some debugging information about your page at the bottom of each page
-_display_debug_panel: false
+_display_debug_panel: true
 
 
 ###########################################################################################
@@ -199,7 +197,7 @@ _prepend_site_root_to_uploads: false
 # _revisions: local_revisions
 
 # Allow deleting files through the File field
-_allow_file_field_deletions: false
+_allow_file_field_deletions: true
 
 ###########################################################################################
 #
