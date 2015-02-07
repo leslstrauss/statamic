@@ -3,7 +3,7 @@ title: Settings
 _fieldset: settings
 email_address: leslie.strauss@gmail.com
 copy_logo: Leslie Strauss
-copy_tagline: Develop / Designer / Builder
+copy_tagline: Web Developer
 copy_lined_list_separator: ':'
 type_theme: type8
 color_theme: color10
@@ -16,6 +16,8 @@ social_icons: |
   <a href="http://github.com/leslstrauss" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
   <a href="http://www.linkedin.com/in/leslstrauss" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
 ---
+
+
 
 
 
