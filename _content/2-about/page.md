@@ -4,7 +4,7 @@ _template: page-sidebar
 _fieldset: page-sidebar
 sidebar: |
   <p><img src="assets/img/about-photo.png" alt="Your Name" /></p>
-
+  
   <div class="lined-list">
   	<ul>
   		<li><strong>Location:</strong> Portland, OR</li>

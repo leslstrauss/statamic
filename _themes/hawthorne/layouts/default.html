@@ -1,39 +1,38 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>{{ theme:partial src="_page-title" }}</title>
+<title>{{ theme:partial src="_page-title" }}</title>
+<meta name="description" content="{{ theme:partial src="_meta-description" }}">
+{{ theme:partial src="_open-graph" }}
+{{ theme:partial src="_twitter-card" }}
 
-  <meta name="description" content="{{ theme:partial src="_meta-description" }}">
-  {{ theme:partial src="_open-graph" }}
-  {{ theme:partial src="_twitter-card" }}
+<link href="/_themes/hawthorne/css/hawthorne_{{ get_content from="/settings" }}{{ type_theme }}{{ /get_content }}_{{ get_content from="/settings" }}{{ color_theme }}{{ /get_content }}.css" rel="stylesheet" >
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link href="/_themes/hawthorne/css/hawthorne_{{ get_content from="/settings" }}{{ type_theme }}{{ /get_content }}_{{ get_content from="/settings" }}{{ color_theme }}{{ /get_content }}.css" rel="stylesheet" >
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-  <script src="{{ _site_root }}{{ theme_path }}bower_components/modernizr/modernizr.js"></script>
+<script src="{{ _site_root }}{{ theme_path }}bower_components/modernizr/modernizr.js"></script>
 
 </head>
 <body>
 
 <!-- Facebook JS -->
-<!-- <div id="fb-root"></div>
+<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script> -->
+}(document, 'script', 'facebook-jssdk'));</script>
 <!-- End Facebook JS -->
 
 <div class="top-border"></div>
 
 <div class="row">
 	<div class="small-12 medium-12 large-12 small-centered columns">
-		<header>
+		<header>		
 			<h1><a href="/">{{ get_content from="/settings" }}{{ copy_logo }}{{ /get_content }}</a></h1>
 			<h2><a href="/">{{ get_content from="/settings" }}{{ copy_tagline }}{{ /get_content }}</a></h2>
 			<!--
@@ -61,10 +60,10 @@
 <script src="{{ theme:js }}"></script>
 
 <!-- Tweet JS -->
-<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <!-- End Tweet JS -->
 
-<!-- {{ get_content from="/settings" }}{{ analytics_code }}{{ /get_content }} -->
+{{ get_content from="/settings" }}{{ analytics_code }}{{ /get_content }}
 
 </body>
 </html>

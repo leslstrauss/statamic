@@ -2,12 +2,12 @@ title: Root Level Project
 hide: yes
 
 fields:
-
+  
   page_title:
     type: text
     display: Page Title in Browser
     instructions: Optional - override the title used above for SEO purposes
-
+  
   meta_description:
     type: text
     display: Meta Description
@@ -20,11 +20,11 @@ fields:
     destination: assets/img/projects
     show_thumbnail: true
     required: true
-
+  
   content:
     type: markitup
     display: Project Description
-
+  
   project_info:
     type: grid
     display: Project Info
@@ -58,12 +58,12 @@ fields:
         display: Alt Text
         type: text
         width: 75%
-
+        
   show_caption:
     type: checkbox
     display: Display Alt Text As Image Caption?
     default: 0
-
+    
   has_back_to_top:
     type: checkbox
     display: Display Back to Top Link at Bottom?
@@ -73,7 +73,7 @@ fields:
     type: textarea
     display: Raw HTML
     instructions: For embedding videos or whatever else you might need, see sample code here - typeandgrids.com/reference/video.txt
-
+    
   _template:
     type: hidden
     default: project-detail

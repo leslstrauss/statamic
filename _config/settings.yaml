@@ -17,7 +17,7 @@ _license_key: e4e80953-c209-4b88-878b-9eb42e216adb
 
 _language: en
 
-# Only set this if Statamic could not correctly guess your site's root
+# Change if you are running Statamic in a subdirectory
 _site_root: /
 
 # Name of your site
@@ -42,8 +42,7 @@ _date_format: 'F j, Y'
 _time_format: 'g:i.s a'
 
 # Timezone
-_timezone: America/San_Francisco
-# _timezone: America/New_York
+_timezone: America/New_York
 
 # List of desired taxonomy triggers
 _taxonomy:
@@ -74,14 +73,12 @@ _enable_smartypants: true
 _theme_cache_bust: false
 
 # Specify where to save transformed images
-_transform_destination: assets/img/resized
-# _transform_destination: false
+_transform_destination: false
 
 # allow the use of PHP in Statamic templates
 _allow_php: false
 
 # Choose your YAML mode:
-#  - quick (Dipper, some of YAML 1.0)
 #  - loose (YAML 1.0)
 #  - transitional (YAML 1.2 falling back to 1.0 if parse failure, logging warnings)
 #  - strict (YAML 1.2)
@@ -99,13 +96,9 @@ _parse_order:
 _fix_out_of_range_pagination: true
 
 # Experimental: Set http/browser cache length. Plain English is perfect. 1 hour, 1 day, 1 week, etc
-_http_cache_expires: false
-# _http_cache_expires: 4 hours
+_http_cache_expires: 4 hours
 
 _enable_static_pipeline: false
-
-# Skip caching member files, will disable the use of member:listing but will allow for many, many more members
-_disable_member_cache: false
 
 
 ###########################################################################################
@@ -118,13 +111,11 @@ _disable_member_cache: false
 # a matching URL, we'll merge the environment-specific config from _config/environments
 _environments:
   dev:
-    - 'http://localhost*'
-    - '*.dev'
-    - '*.localip'
-#   - disable_analytics: true
+    # - 'http://localhost*'
+    # - '*.dev'
+    # - '*.localip'
   live:
-    - '*.com'
-#   - disable_analytics: true
+    # - '*.com'
 
 # Set to 'true' if you want to log system messages
 _log_enabled: true
@@ -157,7 +148,7 @@ _display_debug_panel: false
 #
 ###########################################################################################
 
-# Enable control panel (make sure you your config/system folders aren't web accessible)
+# Enable control panel (make sure you your config/system folders aren't web accessable)
 _admin_enabled: true
 
 # Change the folder name for your admin directory.
@@ -191,21 +182,6 @@ _enable_add_child_page: true
 # Enable/Disable the ability to delete pages via the CP
 _enable_delete_page: true
 
-# Whether or not to prepend the {{ _site_root }} variable to uploads
-_prepend_site_root_to_uploads: false
-
-# What should be used for handling content revisions (if anything at all)
-# _revisions: local_revisions
-
-# Allow deleting files through the File field
-_allow_file_field_deletions: false
-
-###########################################################################################
-#
-#  MISC CONFIGURATION
-#
-###########################################################################################
-
 # plain english works just fine here.
 _cookies.lifetime: 3 months
 
@@ -217,16 +193,6 @@ _cookies.cipher_mode: MCRYPT_MODE_CBC
 # for example, to have "*" be converted to "star" in a slug, you'd do:
 #   "*": "star"
 _custom_transliteration:
-
-
-###########################################################################################
-#
-#  FILE CREATION
-#
-###########################################################################################
-
-# The default permissions Statamic will use for files it creates
-_mode: 0755
 
 
 ###########################################################################################

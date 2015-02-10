@@ -1,31 +1,23 @@
 ---
 title: Settings
 _fieldset: settings
-email_address: leslie.strauss@gmail.com
-copy_logo: Leslie Strauss
-copy_tagline: Web Developer
+email_address: hello@example.com
+copy_logo: Hawthorne
+copy_tagline: 'Design & Art Direction'
 copy_lined_list_separator: ':'
 type_theme: type1
-color_theme: color4
+color_theme: color1
 hide_captions: "1"
 footer_html: |
-  <li>© {{ current_date format="Y" }} <a href="/">Leslie Strauss</a>. All rights reserved.</li>
+  <li>&copy; {{ current_date format="Y" }} <a href="/">Your Name Here</a>. All rights reserved.</li>
   <li><a href="mailto:{{ get_content from="/settings" }}{{ email_address|obfuscate }}{{ /get_content }}"><i class="fa fa-envelope-o"></i> {{ get_content from="/settings" }}{{ email_address|obfuscate }}{{ /get_content }}</a></li>
-copy_site_title: LS
+copy_site_title: Hawthorne
+main_nav_link_grid: ""
 social_icons: |
-  <a href="http://github.com/leslstrauss" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
-  <a href="http://www.linkedin.com/in/leslstrauss" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+  <a href="http://www.twitter.com/typewolf" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+  <a href="http://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+analytics_code:
 ---
-
-
-
-
-
-
-
-
-
-
 
 
 
